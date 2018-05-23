@@ -53,7 +53,6 @@ final class PhotoCell: UICollectionViewCell {
     
     @objc var photoSelected: Bool = false {
         didSet {
-            self.updateAccessibilityLabel(photoSelected)
             let hasChanged = photoSelected != oldValue
             if UIView.areAnimationsEnabled && hasChanged {
                 UIView.animate(withDuration: TimeInterval(0.1), animations: { () -> Void in
@@ -72,10 +71,6 @@ final class PhotoCell: UICollectionViewCell {
                 updateAlpha(photoSelected)
             }
         }
-    }
-    
-    func updateAccessibilityLabel(_ selected: Bool) {
-        self.accessibilityLabel = selected ? "deselect image" : "select image"
     }
     
     fileprivate func updateAlpha(_ selected: Bool) {

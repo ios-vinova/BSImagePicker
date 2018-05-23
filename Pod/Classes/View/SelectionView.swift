@@ -85,6 +85,6 @@ Used as an overlay on selected cells
         selectionString.draw(in: CGRect(x: checkmarkFrame.midX - size.width / 2.0,
             y: checkmarkFrame.midY - size.height / 2.0,
             width: size.width,
-            height: size.height), withAttributes: settings.selectionTextAttributes)
+            height: size.height), withAttributes: settings.selectionTextAttributes )
     }
 }

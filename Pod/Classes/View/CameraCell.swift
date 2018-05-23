@@ -41,7 +41,7 @@ final class CameraCell: UICollectionViewCell {
             session?.sessionPreset = AVCaptureSession.Preset.medium
             
             // Hook upp device
-            let device = AVCaptureDevice.default(for: AVMediaType.video)
+            let device = AVCaptureDevice.default(for: AVMediaType.video)//defaultDevice(withMediaType: AVMediaTypeVideo)
             let input = try AVCaptureDeviceInput(device: device!)
             session?.addInput(input)
             
